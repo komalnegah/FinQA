@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Chatbot from './components/Chatbot';
 import './index.css';
 import logo from './assets/logo.png'; 
+import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,12 +24,13 @@ const App = () => {
       <header className="header">
         <img src={logo} alt="WealthWiz Logo" className="logo" />
         <h1>WealthWiz</h1>
+        {/* Theme toggle button with icon */}
         <button
           className="theme-toggle"
           onClick={toggleTheme}
           aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
         >
-          {darkMode ? '🌙 Dark Mode' : '☀️ Light Mode'}
+          <i className={`fa ${darkMode ? 'fa-moon' : 'fa-sun'}`} style={{ fontSize: '24px' }}></i> {/* Moon for dark mode, sun for light mode */}
         </button>
       </header>
 

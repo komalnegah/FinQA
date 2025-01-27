@@ -93,3 +93,20 @@
     color: white;
   }
   
+  .send-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .send-btn:hover {
+    color: #45a049; /* Change color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  .send-btn:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
