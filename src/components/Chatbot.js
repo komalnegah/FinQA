@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Message from './Message';
-import './Chatbot.css';
+import '../styles/Chatbot.css';
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
@@ -12,6 +12,8 @@ const Chatbot = () => {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+
+  
 
   // Mock financial chatbot responses
   const getBotResponse = (userMessage) => {
@@ -37,6 +39,8 @@ const Chatbot = () => {
       }, 1000);
     }
   };
+
+  
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
